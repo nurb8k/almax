@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Application;
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class MainController extends Controller
 {
@@ -17,6 +18,7 @@ class MainController extends Controller
 
     public function page2()
     {
+        dd(App::getLocale());
         $page = Page::find(2);
         $pageElements = $page->elements;
         return view('page2', compact('page','pageElements'));

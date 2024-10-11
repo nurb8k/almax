@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LanguageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,4 @@ Route::get('/mezhdunarodnye-konsaltingovye-uslugi-v-stranakh-brics', [App\Http\C
 Route::get('/razrabotka-strategii-upravleniya-proektami', [App\Http\Controllers\MainController::class, 'page5'])->name('page5');
 Route::get('/big-data', [App\Http\Controllers\MainController::class, 'page6'])->name('page6');
 Route::post('/send', [App\Http\Controllers\MainController::class, 'send'])->name('send');
+Route::get('lang/{lang}', [LanguageController::class, 'switchLang'])->name('switchLang');

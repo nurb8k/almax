@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Almax Asia</title>
 
     <link rel="stylesheet" href="/assets/css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,6 +51,17 @@
             </div>
         </div>
         <a href="#contacts">Контакты</a>
+
+        <div class="dropdown">
+            <a href="#services" class="dropbtn lang">RU <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.01168 5.5L0.671377 0.25L9.35199 0.250001L5.01168 5.5Z" fill="#DA1931" />
+                </svg></a>
+            <div class="dropdown-content lang">
+                <a href="{{ route('switchLang', ['lang' => 'ru']) }}" data-lang="ru">RU</a>
+                <a href="{{ route('switchLang', ['lang' => 'kz']) }}" data-lang="kz">KZ</a>
+                <a href="{{ route('switchLang', ['lang' => 'en']) }}" data-lang="en">EN</a>
+            </div>
+        </div>
     </nav>
     <button class="contact-button">Свяжитесь с нами</button>
 </header>

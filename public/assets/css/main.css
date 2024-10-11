@@ -69,7 +69,7 @@ header {
 
 nav {
   display: flex;
-  gap: clamp(3.75rem, 5.369vw + 0.307rem, 6.75rem);
+  gap: clamp(3.75rem, 3.369vw + 0.307rem, 6.75rem);
   margin-right: clamp(1.25rem, 6.711vw - 3.054rem, 5rem);
 }
 
@@ -1610,6 +1610,12 @@ nav a {
     line-height: 130%;
     color: #0c0c0c;
     margin-bottom: 30px;
+  }
+
+  .lang{
+    width: 150px;
+    max-width: 50px;
+    min-width: auto ! IMPORTANT;
   }
 
   .mar-b {

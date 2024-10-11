@@ -11,8 +11,7 @@
              data-aos-delay="50"
              data-aos-duration="1000">
             <h1 class="content-title">
-                <span>ALMAX ASIA</span> – ПАРТНЕР В ОПТИМИЗАЦИИ ВАШЕГО БИЗНЕСА В
-                КАЗАХСТАНЕ И УПРАВЛЕНИИ ЗАРУБЕЖНЫМИ ПРОЕКТАМИ в странах ЕАЭС и BRICS
+                {{ $page->title }}
             </h1>
             <div class="content-description">
              {!!  $page->content !!}
@@ -27,12 +26,16 @@
 
     <section class="services-section" >
         <div class="container container-services">
-            <section class="eaec-section"    >
-                <h2 class="eaec-title">ЕАЭС</h2>
+            <section class="eaec-section">
+
+                <h2 class="eaec-title">{{ $pageElements[4]->title }}</h2>
                 <ul class="eaec-list"  data-aos="fade-up"
                     data-aos-offset="200"
                     data-aos-delay="50"
                     data-aos-duration="1000">
+                    @foreach()
+
+                    @endforeach
                     <li class="eaec-item">
                         Интеграция интересов бизнеса в рамках ЕАЭС
                     </li>

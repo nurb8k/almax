@@ -83,7 +83,14 @@ return [
     |
     */
 
-    'locale' => 'ru',
+    'locale' => 'en',
+
+    'fallback_locale' => 'ru',
+    'languages' => [
+        'en' => 'English',
+        'ru' => 'Russian',
+        'kz' => 'Kazakh',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -95,8 +102,6 @@ return [
     | the language folders that are provided through your application.
     |
     */
-
-    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
