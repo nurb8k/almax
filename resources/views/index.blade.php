@@ -33,9 +33,7 @@
                     data-aos-offset="200"
                     data-aos-delay="50"
                     data-aos-duration="1000">
-                    @foreach()
 
-                    @endforeach
                     <li class="eaec-item">
                         Интеграция интересов бизнеса в рамках ЕАЭС
                     </li>
