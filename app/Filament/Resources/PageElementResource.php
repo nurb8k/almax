@@ -28,7 +28,7 @@ class PageElementResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->columnSpanFull()
                     ->label('Заголовок'),
-                Forms\Components\RichEditor::make('content')
+                Forms\Components\MarkdownEditor::make('content')
                     ->columnSpanFull()
                     ->label('Контент')
                     ->required(),
@@ -46,10 +46,17 @@ class PageElementResource extends Resource
                 Forms\Components\Select::make('type')
                     ->label('Тип')
                     ->options([
-                        '1' => 'Карточка',
-                        '2' => 'Изображение',
-                        '3' => 'Видео',
-                        '4' => 'Галерея',
+                        '1' => 'Баннер',
+                        '2' => 'Текст',
+                        '3' => 'Галерия',
+                    ]),
+
+                Forms\Components\Select::make('page_id')
+                    ->label('Тип')
+                    ->options([
+                        '1' => 'Главная',
+                        '2' => 'О компании',
+                        '3' => 'Галерия',
                     ]),
             ]);
     }

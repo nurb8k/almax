@@ -34,26 +34,63 @@
         <a href="#" class="icon"><img src="/assets/img/Ru.svg" alt="Ru" /></a>
     </div>
     <nav class="nav-menu">
-        <a href="#about">О компании</a>
+        @if(App::getLocale() == 'ru')  <a href="{{ route('home') }}">О компании </a>
+        @elseif(App::getLocale() == 'kz')
+            <a href="{{ route('home') }}">Компания туралы</a>
+
+        @else
+            <a href="{{ route('home') }}">About the company</a>
+
+        @endif
+
         <div class="dropdown">
-            <a href="#services" class="dropbtn">Услуги <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="#services" class="dropbtn">
+                @if(App::getLocale() == 'ru')  <a href="{{ route('home') }}">Услуги</a>
+                @elseif(App::getLocale() == 'kz')
+                    <a href="{{ route('home') }}">Қызметтер</a>
+                @else
+                    <a href="{{ route('home') }}">Services</a>
+                @endif
+
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.01168 5.5L0.671377 0.25L9.35199 0.250001L5.01168 5.5Z" fill="#DA1931" />
                 </svg></a>
             <div class="dropdown-content">
-                <a href="{{ route('page2') }}">Налоговое и бухгалтерское консультирование в странах ЕАЭС</a>
-                <a href="{{ route('page3') }}">Управление и операции с недвижимым имуществом в странах ЕАЭС
-                </a>
-                <a href="{{ route('page4') }}">Международные консалтинговые услуги в странах BRICS
-                </a>
-                <a href="{{ route('page5') }}">Разработка стратегии управления проектами</a>
-                <a href="{{ route('page6') }}">Big Data
-                </a>
+                @if(App::getLocale() == 'ru')
+                    <a href="{{ route('page2') }}">Налоговое и бухгалтерское консультирование в странах ЕАЭС</a>
+                    <a href="{{ route('page3') }}">Управление и операции с недвижимым имуществом в странах ЕАЭС
+                    </a>
+                    <a href="{{ route('page4') }}">Международные консалтинговые услуги в странах BRICS
+                    </a>
+                    <a href="{{ route('page5') }}">Разработка стратегии управления проектами</a>
+                    <a href="{{ route('page6') }}">Big Data</a>
+                @elseif(App::getLocale() == 'kz')
+                    <a href="{{ route('page2') }}">Налоговое и бухгалтерское консультирование в странах ЕАЭС</a>
+                    <a href="{{ route('page3') }}">ЕАЭО елдеріндегі жылжымайтын мүлікті басқару және онымен операциялар</a>
+                    <a href="{{ route('page4') }}">BRICS елдеріндегі халықаралық консалтингтік қызметтер</a>
+                    <a href="{{ route('page5') }}">Жобаларды басқару стратегиясын әзірлеу</a>
+                    <a href="{{ route('page6') }}">Big Data</a>
+                @else
+                    <a href="{{ route('page2') }}">Tax and accounting consulting in the EAEU countries</a>
+                    <a href="{{ route('page3') }}">Management and operations with immovable property in the EAEU countries</a>
+                    <a href="{{ route('page4') }}">International consulting services in BRICS countries</a>
+                    <a href="{{ route('page5') }}">Development of a project management strategy</a>
+                    <a href="{{ route('page6') }}">Big Data</a>
+                @endif
+
             </div>
         </div>
-        <a href="#contacts">Контакты</a>
+        @if(App::getLocale() == 'ru')
+            <a href="#contacts">Контакты</a>
+            @elseif(App::getLocale() == 'kz')
+                <a href="#contacts">Контактілер</a>
+            @else
+                <a href="#contacts">Contacts</a>
+            @endif
+
 
         <div class="dropdown">
-            <a href="#services" class="dropbtn lang">RU <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="#services" class="dropbtn lang" style="text-transform: capitalize">{{  App::getLocale() }} <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.01168 5.5L0.671377 0.25L9.35199 0.250001L5.01168 5.5Z" fill="#DA1931" />
                 </svg></a>
             <div class="dropdown-content lang">
@@ -63,56 +100,158 @@
             </div>
         </div>
     </nav>
-    <button class="contact-button">Свяжитесь с нами</button>
+    @if(App::getLocale() == 'ru')
+        <button class="contact-button">Свяжитесь с нами</button>
+    @elseif(App::getLocale() == 'kz')
+        <button class="contact-button">Бізбен хабарласыңыз</button>
+    @else
+        <button class="contact-button">Contact us</button>
+    @endif
+
 </header>
 
 @yield('content')
 
 <footer class="footer-section">
     <div class="container container-footer">
-        <div class="column left-columns">
-            <div class="logo">
-                <img src="/assets/img/Logo.svg" alt="Логотип" />
+        @if(App::getLocale() == 'ru')
+            <div class="column left-columns">
+                <div class="logo">
+                    <img src="/assets/img/Logo.svg" alt="Логотип" />
+                </div>
+                <p class="copyright">Авторское право © 2025 almaxasia.kz</p>
+                <a href="#privacy-policy" class="privacy-link"
+                >Политика конфиденциальности</a
+                >
             </div>
-            <p class="copyright">Авторское право © 2025 almaxasia.kz</p>
-            <a href="#privacy-policy" class="privacy-link"
-            >Политика конфиденциальности</a
-            >
-        </div>
-        <div class="column right-columns">
-            <div class="menu">
-                <ul class="menu-list">
-                    <li class="menu-item">О компании</li>
-                    <li class="menu-item">Услуги</li>
-                    <li class="menu-item">Контакты</li>
-                </ul>
+        @elseif(App::getLocale() == 'kz')
+            <div class="column left-columns">
+                <div class="logo">
+                    <img src="/assets/img/Logo.svg" alt="Логотип" />
+                </div>
+                <p class="copyright">Авторлық құқық © 2025 almaxasia.kz </p>
+                <a href="#privacy-policy" class="privacy-link"
+                >Құпиялылық саясаты</a
+                >
+            </div>
+        @else
+            <div class="column left-columns">
+                <div class="logo">
+                    <img src="/assets/img/Logo.svg" alt="Логотип" />
+                </div>
+                <p class="copyright">Copyright © 2025 almaxasia.kz</p>
+                <a href="#privacy-policy" class="privacy-link"
+                >Privacy policy</a
+                >
             </div>
 
-            <div class="address">
-                <p class="address-text">Almax Asia</p>
-                <p class="address-text">
-                    {{ $contact->address }}
-                </p>
+        @endif
+        @if(App::getLocale() == 'ru')
+            <div class="column right-columns">
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">О компании</li>
+                        <li class="menu-item">Услуги</li>
+                        <li class="menu-item">Контакты</li>
+                    </ul>
+                </div>
+
+                <div class="address">
+                    <p class="address-text">Almax Asia</p>
+                    <p class="address-text">
+                        {{ $contact->address }}
+                    </p>
+                </div>
+                <div class="contacts">
+                    <p class="contacts-text">
+                        {{ $contact->phone1 }} <br />
+                        {{ $contact->phone2 }}
+                    </p>
+                    <p class="contacts-text">{{ $contact->email }}</p>
+                </div>
+                <div class="social-media">
+                    <a href="{{ $contact->vk }}" class="social-link"
+                    ><img src="/assets/img/vk_b.svg" alt=""
+                        /></a>
+                    <a href="{{ $contact->telegram }}" class="social-link"
+                    ><img src="/assets/img/tg_b.svg" alt=""
+                        /></a>
+                    <a href="#" class="social-link"
+                    ><img src="/assets/img/Ru_b.svg" alt=""
+                        /></a>
+                </div>
             </div>
-            <div class="contacts">
-                <p class="contacts-text">
-                    {{ $contact->phone1 }} <br />
-                    {{ $contact->phone2 }}
-                </p>
-                <p class="contacts-text">{{ $contact->email }}</p>
+        @elseif(App::getLocale() == 'kz')
+            <div class="column right-columns">
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item"> Компания туралы</li>
+                        <li class="menu-item">Қызметтер</li>
+                        <li class="menu-item">Контактілер</li>
+                    </ul>
+                </div>
+
+                <div class="address">
+                    <p class="address-text">Almax Asia</p>
+                    <p class="address-text">
+                        {{ $contact->address }}
+                    </p>
+                </div>
+                <div class="contacts">
+                    <p class="contacts-text">
+                        {{ $contact->phone1 }} <br />
+                        {{ $contact->phone2 }}
+                    </p>
+                    <p class="contacts-text">{{ $contact->email }}</p>
+                </div>
+                <div class="social-media">
+                    <a href="{{ $contact->vk }}" class="social-link"
+                    ><img src="/assets/img/vk_b.svg" alt=""
+                        /></a>
+                    <a href="{{ $contact->telegram }}" class="social-link"
+                    ><img src="/assets/img/tg_b.svg" alt=""
+                        /></a>
+                    <a href="#" class="social-link"
+                    ><img src="/assets/img/Ru_b.svg" alt=""
+                        /></a>
+                </div>
             </div>
-            <div class="social-media">
-                <a href="{{ $contact->vk }}" class="social-link"
-                ><img src="/assets/img/vk_b.svg" alt=""
-                    /></a>
-                <a href="{{ $contact->telegram }}" class="social-link"
-                ><img src="/assets/img/tg_b.svg" alt=""
-                    /></a>
-                <a href="#" class="social-link"
-                ><img src="/assets/img/Ru_b.svg" alt=""
-                    /></a>
+        @else
+            <div class="column right-columns">
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">About the company</li>
+                        <li class="menu-item">Services</li>
+                        <li class="menu-item">Contacts</li>
+                    </ul>
+                </div>
+
+                <div class="address">
+                    <p class="address-text">Almax Asia</p>
+                    <p class="address-text">
+                        {{ $contact->address }}
+                    </p>
+                </div>
+                <div class="contacts">
+                    <p class="contacts-text">
+                        {{ $contact->phone1 }} <br />
+                        {{ $contact->phone2 }}
+                    </p>
+                    <p class="contacts-text">{{ $contact->email }}</p>
+                </div>
+                <div class="social-media">
+                    <a href="{{ $contact->vk }}" class="social-link"
+                    ><img src="/assets/img/vk_b.svg" alt=""
+                        /></a>
+                    <a href="{{ $contact->telegram }}" class="social-link"
+                    ><img src="/assets/img/tg_b.svg" alt=""
+                        /></a>
+                    <a href="#" class="social-link"
+                    ><img src="/assets/img/Ru_b.svg" alt=""
+                        /></a>
+                </div>
             </div>
-        </div>
+        @endif
     </div>
 </footer>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

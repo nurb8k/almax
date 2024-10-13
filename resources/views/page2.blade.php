@@ -23,11 +23,18 @@
 </section>
 
 <section class="offer container">
-    <h1 class="offer__title">Что мы предлагаем:</h1>
+    @if(App::getLocale() == 'ru')
+        <h1 class="offer__title">Что мы предлагаем:</h1>
+    @elseif(App::getLocale() == 'en')
+        <h1 class="offer__title">What we offer:</h1>
+    @else
+        <h1 class="offer__title">Біз не ұсынамыз:</h1>
+    @endif
+
     <div class="offer__cards">
         @foreach($pageElements as $element)
-            @if($loop->last)
-                <?php break; ?>
+            @if($element->id == 9)
+                <?php continue; ?>
             @endif
             <div class="offer__card"    data-aos="fade-up"
                  data-aos-offset="200"
@@ -54,13 +61,30 @@
      data-aos-duration="1000">
     <div class="advantages_wrap nowarp">
         <h2 class="advantages__title">{{ $pageElements[6]->titleа }}</h2>
+        @if(App::getLocale() == 'kz')
+            <ul class="advantages__list">
+                <li class="advantages__item">ЕАЭО елдерінің заңнамасын терең білу.</li>
+                <li class="advantages__item">Бизнесіңіздің ерекшеліктеріне бейімделген жекелендірілген кеңестер.</li>
+                <li class="advantages__item">Салық салу және бухгалтерлік есеп саласындағы мәселелерді жедел шешу.</li>
+            </ul>
+            <button class="advantages__button">Қызметке онлайн тапсырыс беру</button>
+        @elseif(App::getLocale() == 'ru')
+            <ul class="advantages__list">
+                <li class="advantages__item">Глубокое знание законодательства стран ЕАЭС.</li>
+                <li class="advantages__item">Персонализированные консультации с учетом специфики вашего бизнеса.</li>
+                <li class="advantages__item">Оперативное решение вопросов в сфере налогообложения и учета.</li>
+            </ul>
+            <button class="advantages__button">Заказать услугу онлайн</button>
+        @else
+            <ul class="advantages__list">
+                <li class="advantages__item">Deep knowledge of the legislation of the EAEU countries.</li>
+                <li class="advantages__item">Personalized consultations taking into account the specifics of your business.</li>
+                <li class="advantages__item">Prompt resolution of issues in the field of taxation and accounting.</li>
+            </ul>
+            <button class="advantages__button">Order service online</button>
+        @endif
 
-        <ul class="advantages__list">
-            <li class="advantages__item">Глубокое знание законодательства стран ЕАЭС.</li>
-            <li class="advantages__item">Персонализированные консультации с учетом специфики вашего бизнеса.</li>
-            <li class="advantages__item">Оперативное решение вопросов в сфере налогообложения и учета.</li>
-        </ul>
-        <button class="advantages__button">Заказать услугу онлайн</button>
+
     </div>
     <img src="/assets/img/page_b.png" alt="Изображение" class="advantages__image ">
 </div>

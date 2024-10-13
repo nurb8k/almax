@@ -33,34 +33,21 @@
                     data-aos-offset="200"
                     data-aos-delay="50"
                     data-aos-duration="1000">
-
-                    <li class="eaec-item">
-                        Интеграция интересов бизнеса в рамках ЕАЭС
-                    </li>
-                    <li class="eaec-item">
-                        Налоговое и бухгалтерское консультирование в странах ЕАЭС
-                    </li>
-                    <li class="eaec-item">
-                        Управление и операции с недвижимым имуществом в странах ЕАЭС
-                    </li>
+                    {!!
+                        $pageElements[4]->content
+                    !!}
                 </ul>
             </section>
 
             <section class="brics-section">
-                <h2 class="brics-title">BRICS</h2>
+                <h2 class="brics-title">{{ $pageElements[5]->title }}</h2>
                 <ul class="brics-list"     data-aos="fade-up"
                     data-aos-offset="200"
                     data-aos-delay="50"
                     data-aos-duration="1000">
-                    <li class="brics-item">
-                        Организация взаимодействия с ведущим бизнес-сообществом BRICS
-                    </li>
-                    <li class="brics-item">
-                        Международные консалтинговые услуги с странах BRICS
-                    </li>
-                    <li class="brics-item">
-                        Управление зарубежными проектами в странах BRICS
-                    </li>
+                    {!!
+                        $pageElements[5]->content
+                    !!}
                 </ul>
             </section>
         </div>
@@ -112,34 +99,19 @@
         <div class="container">
             <div class="cards-container">
                 <div class="card">
-                    <h3 class="card-title">Мы, Almax Asia</h3>
+
+                    <h3 class="card-title">{{  $pageElements[6]->title }}</h3>
                     <p class="card-text">
-                        в силу нашего опыта, выделили следующие направления:
+                        {{  $pageElements[6]->content }}
                     </p>
                 </div>
-                <div class="card">
-                    <p class="card-text">
-                        Налоговое и бухгалтерское консультирование в странах ЕАЭС
-                    </p>
-                </div>
-                <div class="card">
-                    <p class="card-text">
-                        Управление и операции с недвижимым имуществом в странах ЕАЭС
-                    </p>
-                </div>
-                <div class="card">
-                    <p class="card-text">
-                        Международные консалтинговые услуги с странах BRICS
-                    </p>
-                </div>
-                <div class="card">
-                    <p class="card-text">
-                        Управление зарубежными проектами в странах BRICS
-                    </p>
-                </div>
-                <div class="card">
-                    <p class="card-text">BIG DATA</p>
-                </div>
+                @foreach($pages as $page)
+                    <div class="card">
+                        <p class="card-text">
+                            {{ $page->title  }}
+                        </p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -158,7 +130,14 @@
             </div>
 
             <div class="column form-column">
-                <h2 class="contact-title">Остались вопросы?</h2>
+                @if(App::getLocale() == 'ru')
+                    <h2 class="contact-title">Остались вопросы?</h2>
+
+                @elseif(App::getLocale() == 'en')
+                    <h2 class="contact-title">Any questions?</h2>
+                @else
+                    <h2 class="contact-title">Сұрақтарыңыз бар ма?</h2>
+                @endif
                 <form class="contact-form" action="{{ route('send') }}" method="post">
                     @csrf
                     @method('POST')
@@ -197,10 +176,30 @@
                                 class="form-checkbox"
                                 required
                         />
-                        Я согласен на обработку моих персональных данных
+                        @if(App::getLocale() == 'ru')
+                            Я согласен на обработку моих персональных данных
+
+                        @elseif(App::getLocale() == 'en')
+
+                                I agree to the processing of my personal data
+
+                        @else
+
+                                Менің жеке деректерімді өңдеуге келісемін
+
+                        @endif
+
                     </label>
 
-                    <button type="submit" class="form-button">Отправить</button>
+                    <button type="submit" class="form-button">
+                        @if(App::getLocale() == 'ru')
+                            Отправить
+                        @elseif(App::getLocale() == 'en')
+                            Send
+                        @else
+                            Жіберу
+                        @endif
+                    </button>
                 </form>
             </div>
         </div>

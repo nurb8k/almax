@@ -13,12 +13,12 @@ class MainController extends Controller
     {
         $page = Page::first();
         $pageElements = $page->elements;
-        return view('index', compact('page','pageElements'));
+        $pages = Page::where('id', '!=', 1)->get();
+        return view('index', compact('page','pages','pageElements'));
     }
 
     public function page2()
     {
-        dd(App::getLocale());
         $page = Page::find(2);
         $pageElements = $page->elements;
         return view('page2', compact('page','pageElements'));
