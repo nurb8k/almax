@@ -31,7 +31,8 @@ class MainController extends Controller
 
     public function page4()
     {
-        return view('page4');
+        $page4 = Page::find(4);
+        return view('page4', compact('page4'));
     }
 
     public function page5()

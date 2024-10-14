@@ -73,6 +73,11 @@ nav {
   margin-right: clamp(1.25rem, 6.711vw - 3.054rem, 5rem);
 }
 
+.lang{
+  width: 150px;
+  max-width: 50px;
+  min-width: auto ! IMPORTANT;
+}
 nav a {
   font-weight: 600;
   font-size: 14px;
@@ -1610,12 +1615,6 @@ nav a {
     line-height: 130%;
     color: #0c0c0c;
     margin-bottom: 30px;
-  }
-
-  .lang{
-    width: 150px;
-    max-width: 50px;
-    min-width: auto ! IMPORTANT;
   }
 
   .mar-b {

@@ -58,22 +58,16 @@
             <div class="column left-column">
                 <div class="about-us-texts">
                     <h2 class="about-us-title">{{ $pageElements[0]->title }}</h2>
-                    <div class="about-us-text one-text"  data-aos="fade-up"
-                       data-aos-offset="200"
-                       data-aos-delay="50"
-                       data-aos-duration="1000">
+                    <div class="about-us-text one-text">
                         {!!  $pageElements[0]->content  !!}
                     </div>
                 </div>
                 <img
-                        src="{{ asset('storage/'. $pageElements[0]->image) }}"
+                        src="{{ asset('storage/'. $pageElements[1]->image) }}"
                         alt="image_1"
                         class="about_images"
                 />
-                <p class="about-us-text about-two"  data-aos="fade-up"
-                   data-aos-offset="200"
-                   data-aos-delay="50"
-                   data-aos-duration="1000">{!! $pageElements[1]->content !!}</p>
+                {!! $pageElements[1]->content !!}
             </div>
             <div class="column right-column"  data-aos="fade-up"
                  data-aos-offset="200"
@@ -108,7 +102,9 @@
                 @foreach($pages as $page)
                     <div class="card">
                         <p class="card-text">
+                            <a href="{{ route('page'.$loop->index+2) }}" style="color:inherit">
                             {{ $page->title  }}
+                            </a>
                         </p>
                     </div>
                 @endforeach
@@ -211,19 +207,44 @@
              data-aos-duration="1000">
         <div class="container-info">
             <div class="column contact-column">
-                <h2 class="contact-info-title">Контакты</h2>
+                @if(App::getLocale() == 'ru')
+                    <h2 class="contact-info-title">Контакты</h2>
+                @elseif(App::getLocale() == 'en')
+                    <h2 class="contact-info-title">Contacts</h2>
+                @else
+                    <h2 class="contact-info-title">Контактілер</h2>
+                @endif
+
                 <ul class="contact-info-list">
-                    <li class="contact-info-item">
-                        <img src="/assets/img/loc.svg" alt="" />Almax Asia<br />
-                        Республика Казахстан, г. Алматы,<br />
-                        ул. Ауэзова, 60
-                    </li>
+                    @if(App::getLocale() == 'ru')
+                        <li class="contact-info-item">
+                            <img src="/assets/img/loc.svg" alt="" />Almax Asia<br />
+                            Республика Казахстан, г. Алматы,<br />
+                            ул. Ауэзова, 60
+                        </li>
+                    @elseif(App::getLocale() == 'en')
+                        <li class="contact-info-item">
+                            <img src="/assets/img/loc.svg" alt="" />Almax Asia<br />
+                            Қазақстан Республикасы, Алматы қ.<br />
+                            ул. Ауэзова, 60
+                        </li>
+                    @else
+
+                        <li class="contact-info-item">
+                            <img src="/assets/img/loc.svg" alt="" />Almax Asia<br />
+                            Kazakhstan, Almaty<br />
+                            st. Auezova, 60
+                        </li>
+                    @endif
+
                     <li class="contact-info-item">
                         <img src="/assets/img/tel.svg" alt="" /> +7 705 433 54 56,<br />
                         +7 708 983 79 99
                     </li>
                     <li class="contact-info-item">
-                        <img src="/assets/img/email.svg" alt="" /> info@almaxasia.kz
+                        <img src="/assets/img/email.svg" alt="" />
+                        <a href="mailto:almaxasia@gmail.com" style="color:inherit">info@almaxasia.kz
+                        </a>
                     </li>
                 </ul>
             </div>
