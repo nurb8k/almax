@@ -222,7 +222,7 @@
                             Республика Казахстан, г. Алматы,<br />
                             ул. Ауэзова, 60
                         </li>
-                    @elseif(App::getLocale() == 'en')
+                    @elseif(App::getLocale() == 'kz')
                         <li class="contact-info-item">
                             <img src="/assets/img/loc.svg" alt="" />Almax Asia<br />
                             Қазақстан Республикасы, Алматы қ.<br />
