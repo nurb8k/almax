@@ -33,7 +33,7 @@
         <a href="{{ $contact->telegram }}" class="icon"><img src="/assets/img/tg.svg" alt="telegram" /></a>
         <a href="#" class="icon"><img src="/assets/img/Ru.svg" alt="Ru" /></a>
     </div>
-    <nav class="nav-menu">
+    <nav class="nav-menu" @if(App::getLocale()=='kz') style="gap: 40px;margin-right: 30px;" @endif>
         @if(App::getLocale() == 'ru')  <a href="{{ route('home') }}">О компании </a>
         @elseif(App::getLocale() == 'kz')
             <a href="{{ route('home') }}">Компания туралы</a>
