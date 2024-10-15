@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html @if(App::getLocale() == 'ru') lang="ru" @elseif(App::getLocale() == 'kz')  lang="ru"  @else  lang="en" @endif>
+<html @if(App::getLocale() == 'ru') lang="ru" @elseif(App::getLocale() == 'kz')  lang="kz"  @else  lang="en" @endif>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
