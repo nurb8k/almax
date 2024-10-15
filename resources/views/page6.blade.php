@@ -6,11 +6,7 @@
             <h2 class="content-title">Big Data</h2>
             <p class="content-description">
                 @if(App::getLocale() == 'ru')
-                    Мы живем в эпоху цифровой трансформации, где информация становится
-                    самым ценным ресурсом. Практически любая компания в современном мире,
-                    в том числе и ваша, генерирует и получает огромные объемы данных,
-                    которые могут стать ключом к успеху. Мы предлагаем вам воспользоваться
-                    преимуществами Big Data, чтобы вывести ваш бизнес на новый уровень.
+                    Мы живем в эпоху цифровой трансформации, где информация становится самым ценным ресурсом. Практически любая компания в современном мире, в том числе и ваша, генерирует и получает огромные объемы данных, которые могут стать ключом к успеху. Мы предлагаем вам воспользоваться преимуществами Big Data, чтобы вывести ваш бизнес на новый уровень.
                 @elseif(App::getLocale() == 'en')
                     We live in an era of digital transformation, where information becomes
                     the most valuable resource. Almost any company in the modern world,
@@ -93,7 +89,7 @@
                 </div>
                 <div class="offer__card-title">
                     @if(App::getLocale() == 'ru')
-                        Разработка стратегии управления проектами
+                        Оптимизировать бизнес-процессы:
                     @elseif(App::getLocale() == 'en')
                         Development of project management strategy
                     @else
@@ -102,16 +98,11 @@
                 </div>
                 <div class="offer__card-description">
                     @if(App::getLocale() == 'ru')
-                        Мы создаём индивидуальные стратегии для успешного выполнения
-                        проектов, адаптированные под правовые, экономические и культурные
-                        особенности стран BRICS.
+                        Благодаря анализу данных можно выявить узкие места и улучшить эффективность работы всех подразделений.
                     @elseif(App::getLocale() == 'en')
-                        We create individual strategies for the successful implementation
-                        of projects, adapted to the legal, economic, and cultural
-                        characteristics of the BRICS countries.
+                        By analyzing data, you can identify bottlenecks and improve the efficiency of all departments.
                     @else
-                        Біз BRICS елдерінің құқықтық, экономикалық және мәдени ерекшеліктеріне бейімделген
-                        жобаларды сәтті жүзеге асыру үшін жеке стратегиялар жасаймыз.
+                        By analyzing data, you can identify bottlenecks and improve the efficiency of all departments.
                     @endif
                 </div>
             </div>
@@ -125,26 +116,20 @@
                 </div>
                 <div class="offer__card-title">
                     @if(App::getLocale() == 'ru')
-                        Планирование, организация и контроль выполнения проектов
+                        Принять обоснованные решения:
                     @elseif(App::getLocale() == 'en')
-                        Planning, organizing, and controlling project execution
+                        Make informed decisions:
                     @else
-                        Жобаларды орындауды жоспарлау, ұйымдастыру және бақылау
+                        Саналы шешімдер қабылдау:
                     @endif
                 </div>
                 <div class="offer__card-description">
                     @if(App::getLocale() == 'ru')
-                        Обеспечиваем комплексное управление проектами, начиная с
-                        формирования планов и графиков, заканчивая мониторингом всех этапов
-                        исполнения для соблюдения сроков и бюджета.
+                        Информация, полученная из больших данных, позволяет делать точные прогнозы и разрабатывать стратегии, основанные на реальных данных, а не на интуиции.
                     @elseif(App::getLocale() == 'en')
-                        We provide comprehensive project management, from
-                        forming plans and schedules to monitoring all stages
-                        of execution to meet deadlines and budget.
+                        Information obtained from big data allows you to make accurate forecasts and develop strategies based on real data, not intuition.
                     @else
-                        Біз жоспарлар мен кестелерді құрудан бастап барлық кезеңдерді бақылауға дейін
-                        жобаларды кешенді басқаруды қамтамасыз етеміз
-                        мерзімдер мен бюджетті сақтау үшін орындау.
+                        Үлкен деректерден алынған ақпарат интуицияға емес, нақты деректерге негізделген нақты болжамдар жасауға және стратегияларды әзірлеуге мүмкіндік береді.
                     @endif
                 </div>
             </div>
@@ -158,7 +143,7 @@
                 </div>
                 <div class="offer__card-title">
                     @if(App::getLocale() == 'ru')
-                        Управление рисками
+                        Понять своих клиентов:
                     @elseif(App::getLocale() == 'en')
                         Risk management
                     @else
@@ -167,16 +152,11 @@
                 </div>
                 <div class="offer__card-description">
                     @if(App::getLocale() == 'ru')
-                        Анализируем и минимизируем возможные правовые, экономические и
-                        политические риски, характерные для работы в странах BRICS, создавая
-                        устойчивые механизмы защиты.
+                        Анализ поведения и предпочтений клиентов поможет вам предложить им именно то, что они хотят, что увеличит их удовлетворенность и лояльность.
                     @elseif(App::getLocale() == 'en')
-                        We analyze and minimize possible legal, economic, and
-                        political risks characteristic of working in the BRICS countries, creating
-                        sustainable protection mechanisms.
+                        Analyzing customer behavior and preferences will help you offer them exactly what they want, which will increase their satisfaction and loyalty.
                     @else
-                        Біз BRICS елдерінде жұмыс істеуге тән ықтимал құқықтық, экономикалық және
-                        саяси тәуекелдерді талдаймыз және азайтамыз, тұрақты қорғау механизмдерін жасаймыз.
+                        Клиенттердің мінез-құлқы мен қалауларын талдау сізге олар қалаған нәрсені ұсынуға көмектеседі, бұл олардың қанағаттанушылығы мен адалдығын арттырады.
                     @endif
                 </div>
             </div>
@@ -190,26 +170,20 @@
                 </div>
                 <div class="offer__card-title">
                     @if(App::getLocale() == 'ru')
-                        Разрешение конфликтов и управление взаимоотношениями
+                        Увеличить прибыль:
                     @elseif(App::getLocale() == 'en')
-                        Conflict resolution and relationship management
+                        Increase profits:
                     @else
-                        Қақтығыстарды шешу және қарым-қатынасты басқару
+                        Табысты ұлғайту:
                     @endif
                 </div>
                 <div class="offer__card-description">
                     @if(App::getLocale() == 'ru')
-                        Предоставляем консультации по предотвращению конфликтов и управляем
-                        взаимодействием с местными партнёрами и клиентами, обеспечивая
-                        бесперебойную работу и поддержку доверительных отношений.
+                        Эффективное использование данных позволяет выявлять новые возможности для роста и снижения затрат, что напрямую влияет на вашу прибыльность.
                     @elseif(App::getLocale() == 'en')
-                        We provide consultations on conflict prevention and manage
-                        interaction with local partners and clients, ensuring
-                        smooth operation and support of trusting relationships.
+                        Effective use of data allows you to identify new opportunities for growth and cost reduction, which directly impacts your profitability.
                     @else
-                        Біз қақтығыстардың алдын алу бойынша кеңес береміз және жергілікті серіктестермен және клиенттермен
-                        өзара әрекеттесуді басқарамыз, үздіксіз жұмыс істеуді және сенімді қарым-қатынасты қолдауды қамтамасыз етеміз.
-                    @endif
+                        Деректерді тиімді пайдалану өсу мен шығындарды азайтудың жаңа мүмкіндіктерін анықтауға мүмкіндік береді, бұл сіздің кірістілігіңізге тікелей әсер етеді.@endif
                 </div>
             </div>
 
@@ -222,25 +196,20 @@
                 </div>
                 <div class="offer__card-title">
                     @if(App::getLocale() == 'ru')
-                        Координация международных команд и подрядчиков
+                        Предотвращать риски:
                     @elseif(App::getLocale() == 'en')
-                        Coordination of international teams and contractors
+                        Prevent risks:
                     @else
-                        Халықаралық командалар мен мердігерлерді үйлестіру
+                        Тәуекелдердің алдын алу:
                     @endif
                 </div>
                 <div class="offer__card-description">
                     @if(App::getLocale() == 'ru')
-                        Обеспечиваем бесперебойную координацию между проектными командами,
-                        подрядчиками и местными партнёрами, улучшая коммуникацию и
-                        синхронизацию действий на всех уровнях.
+                        Анализ больших данных помогает вовремя выявлять потенциальные угрозы и принимать меры для их минимизации.
                     @elseif(App::getLocale() == 'en')
-                        We ensure seamless coordination between project teams,
-                        contractors, and local partners, improving communication and
-                        synchronization of actions at all levels.
+                        Big data analysis helps to identify potential threats in a timely manner and take measures to minimize them.
                     @else
-                        Біз жобалық командалар, мердігерлер және жергілікті серіктестер арасында үздіксіз үйлестіруді қамтамасыз етеміз,
-                        барлық деңгейлерде коммуникация мен әрекеттерді синхрондауды жақсарту.
+                        Үлкен деректерді талдау әлеуетті қауіптерді дер кезінде анықтауға және оларды азайту шараларын қабылдауға көмектеседі.
                     @endif
                 </div>
             </div>
