@@ -55,7 +55,7 @@
                 <div class="block_advgs">
                     <img src="/assets/img/page_b.png" alt="Изображение" class="advantages__image" />
                     <ul class="advantages__list">
-                        {{$pageElements->last()->content}}
+                        {!! $pageElements->last()->content !!}
                     </ul>
                     <button class="advantages__button">Заказать услугу онлайн</button>
                 </div>

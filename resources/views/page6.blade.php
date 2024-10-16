@@ -85,9 +85,8 @@ $asd = $pageElements->whereIn('id',$predLastPageId)->first();
                 {{$pageElements->last()->title}}
             </h2>
             <ul class="advantages__list">
-                <li class="advantages__item">
-                    {!! $pageElements->last()->content !!}}
-                </li>
+
+                    {!! $pageElements->last()->content !!}
 
             </ul>
             <button class="advantages__button">
