@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html @if(App::getLocale() == 'ru') lang="ru" @elseif(App::getLocale() == 'kz')  lang="kz"  @else  lang="en" @endif>
+<html @if(App::getLocale() == 'ru') lang="ru" @elseif(App::getLocale() == 'kk')  lang="kz"  @else  lang="en" @endif>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,9 +33,9 @@
         <a href="{{ $contact->telegram }}" class="icon"><img src="/assets/img/tg.svg" alt="telegram" /></a>
         <a href="#" class="icon"><img src="/assets/img/Ru.svg" alt="Ru" /></a>
     </div>
-    <nav class="nav-menu" @if(App::getLocale()=='kz') style="gap: 40px;margin-right: 30px;" @endif>
+    <nav class="nav-menu" @if(App::getLocale()=='kk') style="gap: 40px;margin-right: 30px;" @endif>
         @if(App::getLocale() == 'ru')  <a href="{{ route('home') }}">О компании </a>
-        @elseif(App::getLocale() == 'kz')
+        @elseif(App::getLocale() == 'kk')
             <a href="{{ route('home') }}">Компания туралы</a>
 
         @else
@@ -46,7 +46,7 @@
         <div class="dropdown">
             <a href="#services" class="dropbtn">
                 @if(App::getLocale() == 'ru')  <a href="{{ route('home') }}">Услуги</a>
-                @elseif(App::getLocale() == 'kz')
+                @elseif(App::getLocale() == 'kk')
                     <a href="{{ route('home') }}">Қызметтер</a>
                 @else
                     <a href="{{ route('home') }}">Services</a>
@@ -62,19 +62,19 @@
                     </a>
                     <a href="{{ route('page4') }}">Международные консалтинговые услуги в странах BRICS
                     </a>
-                    <a href="{{ route('page5') }}">Разработка стратегии управления проектами</a>
+                    <a href="{{ route('page5') }}">Управление зарубежными проектами в странах BRICS</a>
                     <a href="{{ route('page6') }}">Big Data</a>
-                @elseif(App::getLocale() == 'kz')
-                    <a href="{{ route('page2') }}">Налоговое и бухгалтерское консультирование в странах ЕАЭС</a>
+                @elseif(App::getLocale() == 'kk')
+                        <a href="{{ route('page2') }}">ЕАЭО елдерінде салық және бухгалтерлік есеп бойынша кеңес беру</a>
                     <a href="{{ route('page3') }}">ЕАЭО елдеріндегі жылжымайтын мүлікті басқару және онымен операциялар</a>
                     <a href="{{ route('page4') }}">BRICS елдеріндегі халықаралық консалтингтік қызметтер</a>
-                    <a href="{{ route('page5') }}">Жобаларды басқару стратегиясын әзірлеу</a>
+                    <a href="{{ route('page5') }}">БРИКС елдерінде шетелдік жобаларды басқару</a>
                     <a href="{{ route('page6') }}">Big Data</a>
                 @else
                     <a href="{{ route('page2') }}">Tax and accounting consulting in the EAEU countries</a>
                     <a href="{{ route('page3') }}">Management and operations with immovable property in the EAEU countries</a>
                     <a href="{{ route('page4') }}">International consulting services in BRICS countries</a>
-                    <a href="{{ route('page5') }}">Development of a project management strategy</a>
+                    <a href="{{ route('page5') }}">Management of foreign projects in BRICS countries</a>
                     <a href="{{ route('page6') }}">Big Data</a>
                 @endif
 
@@ -82,7 +82,7 @@
         </div>
         @if(App::getLocale() == 'ru')
             <a href="#contacts">Контакты</a>
-            @elseif(App::getLocale() == 'kz')
+            @elseif(App::getLocale() == 'kk')
                 <a href="#contacts">Контактілер</a>
             @else
                 <a href="#contacts">Contacts</a>
@@ -90,19 +90,19 @@
 
 
         <div class="dropdown">
-            <a href="#services" class="dropbtn lang" style="text-transform: capitalize">{{  App::getLocale() }} <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="#services" class="dropbtn lang" style="text-transform: capitalize">{{  App::getLocale() == 'kk' ? 'kz' : App::getLocale() }} <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.01168 5.5L0.671377 0.25L9.35199 0.250001L5.01168 5.5Z" fill="#DA1931" />
                 </svg></a>
             <div class="dropdown-content lang">
                 <a href="{{ route('switchLang', ['lang' => 'ru']) }}" data-lang="ru">RU</a>
-                <a href="{{ route('switchLang', ['lang' => 'kz']) }}" data-lang="kz">KZ</a>
+                <a href="{{ route('switchLang', ['lang' => 'kk']) }}" data-lang="kk">KZ</a>
                 <a href="{{ route('switchLang', ['lang' => 'en']) }}" data-lang="en">EN</a>
             </div>
         </div>
     </nav>
     @if(App::getLocale() == 'ru')
         <button class="contact-button">Свяжитесь с нами</button>
-    @elseif(App::getLocale() == 'kz')
+    @elseif(App::getLocale() == 'kk')
         <button class="contact-button">Бізбен хабарласыңыз</button>
     @else
         <button class="contact-button">Contact us</button>
@@ -124,7 +124,7 @@
                 >Политика конфиденциальности</a
                 >
             </div>
-        @elseif(App::getLocale() == 'kz')
+        @elseif(App::getLocale() == 'kk')
             <div class="column left-columns">
                 <div class="logo">
                     <img src="/assets/img/Logo.svg" alt="Логотип" />
@@ -181,7 +181,7 @@
                         /></a>
                 </div>
             </div>
-        @elseif(App::getLocale() == 'kz')
+        @elseif(App::getLocale() == 'kk')
             <div class="column right-columns">
                 <div class="menu">
                     <ul class="menu-list">

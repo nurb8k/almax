@@ -21,28 +21,37 @@ class MainController extends Controller
     {
         $page = Page::find(2);
         $pageElements = $page->elements;
+//        dd($pageElements);
+        
         return view('page2', compact('page','pageElements'));
     }
 
     public function page3()
     {
-        return view('page3');
+        $page = Page::find(3);
+        $pageElements = $page->elements;
+        return view('page3', compact('page','pageElements'));
     }
 
     public function page4()
     {
-        $page4 = Page::find(4);
-        return view('page4', compact('page4'));
+        $page = Page::find(4);
+        $pageElements = $page->elements;
+        return view('page4', compact('page','pageElements'));
     }
 
     public function page5()
     {
-        return view('page5');
+        $page = Page::find(5);
+        $pageElements = $page->elements;
+        return view('page5', compact('page','pageElements'));
     }
 
     public function page6()
     {
-        return view('page6');
+        $page = Page::find(6);
+        $pageElements = $page->elements;
+        return view('page6', compact('page','pageElements'));
     }
 
     public function send(Request $request)

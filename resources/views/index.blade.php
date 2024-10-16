@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <img
-                        src="{{ asset('storage/'. $pageElements[1]->image) }}"
+                        src="{{ asset('storage/'. $pageElements[0]->image) }}"
                         alt="image_1"
                         class="about_images"
                 />
@@ -222,7 +222,7 @@
                             Республика Казахстан, г. Алматы,<br />
                             ул. Ауэзова, 60
                         </li>
-                    @elseif(App::getLocale() == 'kz')
+                    @elseif(App::getLocale() == 'kk')
                         <li class="contact-info-item">
                             <img src="/assets/img/loc.svg" alt="" />Almax Asia<br />
                             Қазақстан Республикасы, Алматы қ.<br />

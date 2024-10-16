@@ -78,7 +78,11 @@ class PageElementResource extends Resource
 
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('page_id')
+                    ->options(
+                        \App\Models\Page::all()->pluck('title', 'id')->toArray()
+                    )
+                    ->label('Страница'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

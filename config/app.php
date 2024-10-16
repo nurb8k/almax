@@ -89,7 +89,7 @@ return [
     'languages' => [
         'en' => 'English',
         'ru' => 'Russian',
-        'kz' => 'Kazakh',
+        'kk' => 'Kazakh',
     ],
 
     /*

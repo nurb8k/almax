@@ -33,6 +33,7 @@
 
     <div class="offer__cards">
         @foreach($pageElements as $element)
+{{--            @dd($pageElements)--}}
             @if($element->id == 9)
                 <?php continue; ?>
             @endif
@@ -60,31 +61,9 @@
      data-aos-delay="50"
      data-aos-duration="1000">
     <div class="advantages_wrap nowarp">
-        <h2 class="advantages__title">{{ $pageElements[6]->titleа }}</h2>
-        @if(App::getLocale() == 'kz')
-            <ul class="advantages__list">
-                <li class="advantages__item">ЕАЭО елдерінің заңнамасын терең білу.</li>
-                <li class="advantages__item">Бизнесіңіздің ерекшеліктеріне бейімделген жекелендірілген кеңестер.</li>
-                <li class="advantages__item">Салық салу және бухгалтерлік есеп саласындағы мәселелерді жедел шешу.</li>
-            </ul>
-            <button class="advantages__button">Қызметке онлайн тапсырыс беру</button>
-        @elseif(App::getLocale() == 'ru')
-            <ul class="advantages__list">
-                <li class="advantages__item">Глубокое знание законодательства стран ЕАЭС.</li>
-                <li class="advantages__item">Персонализированные консультации с учетом специфики вашего бизнеса.</li>
-                <li class="advantages__item">Оперативное решение вопросов в сфере налогообложения и учета.</li>
-            </ul>
-            <button class="advantages__button">Заказать услугу онлайн</button>
-        @else
-            <ul class="advantages__list">
-                <li class="advantages__item">Deep knowledge of the legislation of the EAEU countries.</li>
-                <li class="advantages__item">Personalized consultations taking into account the specifics of your business.</li>
-                <li class="advantages__item">Prompt resolution of issues in the field of taxation and accounting.</li>
-            </ul>
-            <button class="advantages__button">Order service online</button>
-        @endif
-
-
+        <h2 class="advantages__title">{{ $pageElements[6]->title }}</h2>
+        {!! $pageElements[6]->content !!}
+{{--        TODO design am bolvatr--}}
     </div>
     <img src="/assets/img/page_b.png" alt="Изображение" class="advantages__image ">
 </div>
@@ -123,4 +102,19 @@
     </div>
 </div>
 @endsection
+<style>
+    /*ul{*/
+    /*    padding-left: 15px;*/
+    /*}*/
 
+    /*li{*/
+    /*    content: url(/assets/img/marker.svg);*/
+    /*    font-weight: 600;*/
+    /*    font-size: 18px;*/
+    /*    line-height: 150%;*/
+    /*    color: #53595a;*/
+    /*    list-style-type: disc;*/
+    /*    padding-left: 10px;*/
+    /*    margin-bottom: 16px;*/
+    /*}*/
+</style>
