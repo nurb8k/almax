@@ -146,9 +146,9 @@
                 <div class="column right-columns">
                     <div class="menu">
                         <ul class="menu-list">
-                            <li class="menu-item"><a href="{{ route('home') }}">О компании</a></li>
-                            <li class="menu-item"><a href="{{ route('page2') }}">Услуги</a></li>
-                            <li class="menu-item"><a href="{{ route('home') }}">Контакты</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">О компании</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}">Услуги</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">Контакты</a></li>
                         </ul>
                     </div>
 
@@ -172,9 +172,9 @@
             <div class="column right-columns">
                 <div class="menu">
                     <ul class="menu-list">
-                        <li class="menu-item"> <a href="{{ route('home') }}"> Компания туралы </a></li>
-                        <li class="menu-item"><a href="{{ route('page2') }}"> Қызметтер </a></li>
-                        <li class="menu-item"><a href="{{ route('home') }}">Контактілер </a></li>
+                        <li class="menu-item"> <a style="color: inherit" href="{{ route('home') }}"> Компания туралы </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}"> Қызметтер </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">Контактілер </a></li>
                     </ul>
                 </div>
 
@@ -204,9 +204,9 @@
             <div class="column right-columns">
                 <div class="menu">
                     <ul class="menu-list">
-                        <li class="menu-item"><a href="{{ route('home') }}">About the company</a></li>
-                        <li class="menu-item"><a href="{{ route('page2') }}">Services</a></li>
-                        <li class="menu-item"><a href="{{ route('home') }}">Contacts</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">About the company</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}">Services</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">Contacts</a></li>
                     </ul>
                 </div>
 
