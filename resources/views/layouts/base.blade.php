@@ -150,8 +150,16 @@
             <div class="column right-columns">
                 <div class="menu">
                     <ul class="menu-list">
-                        <li class="menu-item">О компании</li>
-                        <li class="menu-item">Услуги</li>
+                        <li class="menu-item">
+                            <a style="color:inherit" href="{{ route('home') }}">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a style="color:inherit" href="{{ route('page2') }}">
+                                Услуги
+                            </a>
+                        </li>
                         <li class="menu-item">Контакты</li>
                     </ul>
                 </div>
@@ -193,9 +201,6 @@
 
                 <div class="address">
                     <p class="address-text">Almax Asia</p>
-                    <p class="address-text">
-                        {{ $contact->address }}
-                    </p>
                 </div>
                 <div class="contacts">
                     <p class="contacts-text">
