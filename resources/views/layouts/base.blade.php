@@ -143,56 +143,38 @@
 
         @endif
         @if(App::getLocale() == 'ru')
-            <div class="column right-columns">
-                <div class="menu">
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a style="color:inherit" href="{{ route('home') }}">
-                                О компании!
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a style="color:inherit" href="{{ route('page2') }}">
-                                Услуги
-                            </a>
-                        </li>
-                        <li class="menu-item">Контакты</li>
-                    </ul>
-                </div>
+                <div class="column right-columns">
+                    <div class="menu">
+                        <ul class="menu-list">
+                            <li class="menu-item"><a href="{{ route('home') }}">О компании</a></li>
+                            <li class="menu-item"><a href="{{ route('page2') }}">Услуги</a></li>
+                            <li class="menu-item"><a href="{{ route('home') }}">Контакты</a></li>
+                        </ul>
+                    </div>
 
-                <div class="address">
-                    <p class="address-text">Almax Asia</p>
-                    <p class="address-text">
-                        {{ $contact->address }}
-                    </p>
+                    <div class="address">
+                        <p class="address-text">Almax Asia</p>
+                    </div>
+                    <div class="contacts">
+                        <p class="contacts-text">
+                            {{ $contact->phone1 }} <br />
+                            {{ $contact->phone2 }}
+                        </p>
+                        <p class="contacts-text">{{ $contact->email }}</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="{{ $contact->vk }}" class="social-link"><img src="/assets/img/vk_b.svg" alt=""></a>
+                        <a href="{{ $contact->telegram }}" class="social-link"><img src="/assets/img/tg_b.svg" alt=""></a>
+                    </div>
                 </div>
-                <div class="contacts">
-                    <p class="contacts-text">
-                        {{ $contact->phone1 }} <br />
-                        {{ $contact->phone2 }}
-                    </p>
-                    <p class="contacts-text">{{ $contact->email }}</p>
-                </div>
-                <div class="social-media">
-                    <a href="{{ $contact->vk }}" class="social-link"
-                    ><img src="/assets/img/vk_b.svg" alt=""
-                        /></a>
-                    <a href="{{ $contact->telegram }}" class="social-link"
-                    ><img src="/assets/img/tg_b.svg" alt=""
-                        /></a>
-                    <a href="#" class="social-link"
-                    ><img src="/assets/img/Ru_b.svg" alt=""
-                        /></a>
-                </div>
-            </div>
 
         @elseif(App::getLocale() == 'kk')
             <div class="column right-columns">
                 <div class="menu">
                     <ul class="menu-list">
-                        <li class="menu-item"> Компания туралы</li>
-                        <li class="menu-item">Қызметтер</li>
-                        <li class="menu-item">Контактілер</li>
+                        <li class="menu-item"> <a href="{{ route('home') }}"> Компания туралы </a></li>
+                        <li class="menu-item"><a href="{{ route('page2') }}"> Қызметтер </a></li>
+                        <li class="menu-item"><a href="{{ route('home') }}">Контактілер </a></li>
                     </ul>
                 </div>
 
@@ -222,9 +204,9 @@
             <div class="column right-columns">
                 <div class="menu">
                     <ul class="menu-list">
-                        <li class="menu-item">About the company</li>
-                        <li class="menu-item">Services</li>
-                        <li class="menu-item">Contacts</li>
+                        <li class="menu-item"><a href="{{ route('home') }}">About the company</a></li>
+                        <li class="menu-item"><a href="{{ route('page2') }}">Services</a></li>
+                        <li class="menu-item"><a href="{{ route('home') }}">Contacts</a></li>
                     </ul>
                 </div>
 

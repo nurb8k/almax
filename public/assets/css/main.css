@@ -667,7 +667,7 @@ nav a {
   position: relative;
   padding: 70px 10px;
   background: #eeeeee;
-  z-index: -2;
+  z-index: 29 !important;
 }
 
 .footer-section::before {
