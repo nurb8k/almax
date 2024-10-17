@@ -130,9 +130,7 @@
                     <img src="/assets/img/Logo.svg" alt="Логотип" />
                 </div>
                 <p class="copyright">Авторлық құқық © 2025 almaxasia.kz </p>
-                <a href="#privacy-policy" class="privacy-link"
-                >Құпиялылық саясаты</a
-                >
+                <a href="#privacy-policy" class="privacy-link">Құпиялылық саясаты</a>
             </div>
         @else
             <div class="column left-columns">
@@ -140,9 +138,7 @@
                     <img src="/assets/img/Logo.svg" alt="Логотип" />
                 </div>
                 <p class="copyright">Copyright © 2025 almaxasia.kz</p>
-                <a href="#privacy-policy" class="privacy-link"
-                >Privacy policy</a
-                >
+                <a href="#privacy-policy" class="privacy-link">Privacy policy</a>
             </div>
 
         @endif
@@ -152,7 +148,7 @@
                     <ul class="menu-list">
                         <li class="menu-item">
                             <a style="color:inherit" href="{{ route('home') }}">
-                                О компании
+                                О компании!
                             </a>
                         </li>
                         <li class="menu-item">
@@ -189,6 +185,7 @@
                         /></a>
                 </div>
             </div>
+
         @elseif(App::getLocale() == 'kk')
             <div class="column right-columns">
                 <div class="menu">
