@@ -233,9 +233,6 @@
 
                 <div class="address">
                     <p class="address-text">Almax Asia</p>
-                    <p class="address-text">
-                        {{ $contact->address }}
-                    </p>
                 </div>
                 <div class="contacts">
                     <p class="contacts-text">
