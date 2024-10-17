@@ -147,7 +147,11 @@
                     <div class="menu">
                         <ul class="menu-list">
                             <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">О компании</a></li>
-                            <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}">Услуги</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}">Налоговое и бухгалтерское консультирование в странах ЕАЭС</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('page3') }}">Управление и операции с недвижимым имуществом в странах ЕАЭС</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('page4') }}">Международные консалтинговые услуги в странах BRICS</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('page5') }}">Управление зарубежными проектами в странах BRICS</a></li>
+                            <li class="menu-item"><a style="color: inherit" href="{{ route('page6') }}">Big Data</a></li>
                             <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">Контакты</a></li>
                         </ul>
                     </div>
@@ -173,7 +177,11 @@
                 <div class="menu">
                     <ul class="menu-list">
                         <li class="menu-item"> <a style="color: inherit" href="{{ route('home') }}"> Компания туралы </a></li>
-                        <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}"> Қызметтер </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}"> ЕАЭО елдерінде салық және бухгалтерлік есеп бойынша кеңес беру </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page3') }}"> ЕАЭО елдеріндегі жылжымайтын мүлікті басқару және онымен операциялар </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page4') }}"> BRICS елдеріндегі халықаралық консалтингтік қызметтер </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page5') }}"> БРИКС елдерінде шетелдік жобаларды басқару </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page6') }}"> Big Data </a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">Контактілер </a></li>
                     </ul>
                 </div>
@@ -205,7 +213,11 @@
                 <div class="menu">
                     <ul class="menu-list">
                         <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">About the company</a></li>
-                        <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}">Services</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}">Tax and accounting consulting in the EAEU countries</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page3') }}">Management and operations with immovable property in the EAEU countries</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page4') }}">International consulting services in BRICS countries</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page5') }}">Management of foreign projects in BRICS countries</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page6') }}">Big Data</a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">Contacts</a></li>
                     </ul>
                 </div>
