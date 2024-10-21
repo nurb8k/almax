@@ -72,7 +72,7 @@
                     <a href="{{ route('page6') }}">Big Data</a>
                 @else
                     <a href="{{ route('page2') }}">Tax and accounting consulting in the EAEU countries</a>
-                    <a href="{{ route('page3') }}">Management and operations with immovable property in the EAEU countries</a>
+                    <a href="{{ route('page3') }}">Real estate management and operations in the EAEU countries</a>
                     <a href="{{ route('page4') }}">International consulting services in BRICS countries</a>
                     <a href="{{ route('page5') }}">Management of foreign projects in BRICS countries</a>
                     <a href="{{ route('page6') }}">Big Data</a>
@@ -81,12 +81,12 @@
             </div>
         </div>
         @if(App::getLocale() == 'ru')
-            <a href="#contacts">Контакты</a>
-            @elseif(App::getLocale() == 'kk')
-                <a href="#contacts">Контактілер</a>
-            @else
-                <a href="#contacts">Contacts</a>
-            @endif
+        <a id="contacts" href="#contacts">Контакты</a>
+        @elseif(App::getLocale() == 'kk')
+            <a id="contacts" href="#contacts">Контактілер</a>
+        @else
+            <a id="contacts" href="#contacts">Contacts</a>
+        @endif
 
 
         <div class="dropdown">
@@ -101,11 +101,11 @@
         </div>
     </nav>
     @if(App::getLocale() == 'ru')
-        <button class="contact-button">Свяжитесь с нами</button>
+        <button id="contacts2" class="contact-button">Свяжитесь с нами</button>
     @elseif(App::getLocale() == 'kk')
-        <button class="contact-button">Бізбен хабарласыңыз</button>
+        <button id="contacts2" class="contact-button">Бізбен хабарласыңыз</button>
     @else
-        <button class="contact-button">Contact us</button>
+        <button style="z-index: 8888" id="contacts2" class="contact-button">Contact us</button>
     @endif
 
 </header>
@@ -214,7 +214,7 @@
                     <ul class="menu-list">
                         <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">About the company</a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}">Tax and accounting consulting in the EAEU countries</a></li>
-                        <li class="menu-item"><a style="color: inherit" href="{{ route('page3') }}">Management and operations with immovable property in the EAEU countries</a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page3') }}">Real estate management and operations in the EAEU countries</a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page4') }}">International consulting services in BRICS countries</a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page5') }}">Management of foreign projects in BRICS countries</a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page6') }}">Big Data</a></li>
@@ -257,6 +257,16 @@
         document.querySelector('.nav-menu').classList.toggle('active');
         document.querySelector('.contact-button').classList.toggle('actives');
         document.querySelector('.icons').classList.toggle('activeses');
+    });
+
+    document.getElementById('contacts').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('.container-info').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('contacts2').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('.container-info').scrollIntoView({ behavior: 'smooth' });
     });
 
 

@@ -137,33 +137,83 @@
                 <form class="contact-form" action="{{ route('send') }}" method="post">
                     @csrf
                     @method('POST')
-                    <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Имя / Компания *"
-                            class="form-input"
-                            required
-                    />
+                    @if(App::getLocale() == 'ru')
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Имя / Компания *"
+                                class="form-input"
+                                required
+                        />
+                        <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Телефон *"
+                                class="form-input"
+                                required
+                        />
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Ваша почта *"
+                                class="form-input"
+                                required
+                        />
 
-                    <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="Телефон *"
-                            class="form-input"
-                            required
-                    />
-
-                    <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Ваша почта *"
-                            class="form-input"
-                            required
-                    />
-
+                    @elseif(App::getLocale() == 'en')
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Name / Company *"
+                                class="form-input"
+                                required
+                        />
+                        <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Phone *"
+                                class="form-input"
+                                required
+                        />
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Email *"
+                                class="form-input"
+                                required
+                        />
+                    @else
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Атыңыз / Компания *"
+                                class="form-input"
+                                required
+                        />
+                        <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Телефон *"
+                                class="form-input"
+                                required
+                        />
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Сіздің пошта *"
+                                class="form-input"
+                                required
+                        />
+                    @endif
                     <label for="consent" class="form-label">
                         <input
                                 type="checkbox"
@@ -226,7 +276,7 @@
                         <li class="contact-info-item">
                             <img src="/assets/img/loc.svg" alt="" />Almax Asia<br />
                             Қазақстан Республикасы, Алматы қ.<br />
-                            ул. Ауэзова, 60
+                             Ауэзова, 60 к-сі
                         </li>
                     @else
 

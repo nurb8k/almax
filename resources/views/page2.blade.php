@@ -74,20 +74,118 @@
         <span class="close">&times;</span>
         <h2>Закажите услугу онлайн</h2>
         <p>Заполните форму, и наш специалист свяжется с вами для подтверждения заказа и обсуждения деталей услуги.</p>
-        <form id="popup-form">
-            <input type="text" name="name" placeholder="Имя / Компания *" required><br>
+        <form class="contact-form" action="{{ route('send') }}" method="post">
+            @csrf
+            @method('POST')
+            @if(App::getLocale() == 'ru')
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Имя / Компания *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Телефон *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ваша почта *"
+                        class="form-input"
+                        required
+                />
 
-            <input type="tel" name="phone" placeholder="Телефон *" required><br>
+            @elseif(App::getLocale() == 'en')
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Name / Company *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email *"
+                        class="form-input"
+                        required
+                />
+            @else
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Атыңыз / Компания *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Телефон *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Сіздің пошта *"
+                        class="form-input"
+                        required
+                />
+            @endif
+            <label for="consent" class="form-label">
+                <input
+                        type="checkbox"
+                        id="consent"
+                        name="consent"
+                        class="form-checkbox"
+                        required
+                />
+                @if(App::getLocale() == 'ru')
+                    Я согласен на обработку моих персональных данных
 
-            <input type="email" name="email" placeholder="Ваша почта *" required><br>
+                @elseif(App::getLocale() == 'en')
 
-            <div>
-                <input type="checkbox" name="consent" required>
-                <span>Я согласен на обработку моих персональных данных</span>
-            </div>
+                    I agree to the processing of my personal data
 
-            <button type="submit">Отправить заявку</button>
-            <button type="button" class="cancel">Отмена</button>
+                @else
+
+                    Менің жеке деректерімді өңдеуге келісемін
+
+                @endif
+
+            </label>
+
+            <button type="submit" class="form-button">
+                @if(App::getLocale() == 'ru')
+                    Отправить
+                @elseif(App::getLocale() == 'en')
+                    Send
+                @else
+                    Жіберу
+                @endif
+            </button>
         </form>
     </div>
 </div>

@@ -57,7 +57,13 @@
                     <ul class="advantages__list">
                         {!! $pageElements->last()->content !!}
                     </ul>
-                    <button class="advantages__button">Заказать услугу онлайн</button>
+                    <button id="contacts" class="advantages__button">@if(App::getLocale() == 'ru')
+                            Заказать услугу онлайн
+                        @elseif(App::getLocale() == 'en')
+                            Order the service online
+                        @else
+                            Қызметке онлайн тапсырыс беру
+                        @endif</button>
                 </div>
             </div>
     </div>
