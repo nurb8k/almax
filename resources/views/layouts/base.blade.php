@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
 </head>
 <body>
 <header class="header hedaer_container">
@@ -113,7 +113,134 @@
 @yield('content')
 
 <!-- Попап (изначально скрыт) -->
+<div id="popup" class="popup" style="display:none;">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        @if(App::getLocale() == 'ru')
+            <h2>Закажите услугу онлайн</h2>
+            <p>Заполните форму, и наш специалист свяжется с вами для подтверждения заказа и обсуждения деталей услуги.</p>
+        @elseif(App::getLocale() == 'en')
+            <h2>Order the service online</h2>
+            <p>Fill out the form, and our specialist will contact you to confirm the order and discuss the details of the service.</p>
+        @else
+            <h2>Онлайн қызметке тапсырыс беріңіз</h2>
+            <p>Форманы толтырыңыз және біздің мамандар сізге хабарласады, тапсырысты растау және қызметтің егжей-тегжейлерін шешу үшін.</p>
+        @endif
+        <form class="contact-form" action="{{ route('send') }}" method="post">
+            @csrf
+            @method('POST')
+            @if(App::getLocale() == 'ru')
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Имя / Компания *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Телефон *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ваша почта *"
+                        class="form-input"
+                        required
+                />
 
+            @elseif(App::getLocale() == 'en')
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Name / Company *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email *"
+                        class="form-input"
+                        required
+                />
+            @else
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Атыңыз / Компания *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Телефон *"
+                        class="form-input"
+                        required
+                />
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Сіздің пошта *"
+                        class="form-input"
+                        required
+                />
+            @endif
+            <label for="consent" class="form-label">
+                <input
+                        type="checkbox"
+                        id="consent"
+                        name="consent"
+                        class="form-checkbox"
+                        required
+                />
+                @if(App::getLocale() == 'ru')
+                    Я согласен на обработку моих персональных данных
+
+                @elseif(App::getLocale() == 'en')
+
+                    I agree to the processing of my personal data
+
+                @else
+
+                    Менің жеке деректерімді өңдеуге келісемін
+
+                @endif
+
+            </label>
+
+            <button type="submit" class="form-button">
+                @if(App::getLocale() == 'ru')
+                    Отправить
+                @elseif(App::getLocale() == 'en')
+                    Send
+                @else
+                    Жіберу
+                @endif
+            </button>
+        </form>
+    </div>
+</div>
 
 <!-- Попап с благодарностью -->
 <div id="thankyou-popup" class="popup" style="display:none;">
