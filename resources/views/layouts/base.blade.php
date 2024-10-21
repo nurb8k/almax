@@ -319,7 +319,7 @@
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page2') }}"> ЕАЭО елдерінде салық және бухгалтерлік есеп бойынша кеңес беру </a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page3') }}"> ЕАЭО елдеріндегі жылжымайтын мүлікті басқару және онымен операциялар </a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page4') }}"> BRICS елдеріндегі халықаралық консалтингтік қызметтер </a></li>
-                        <li class="menu-item"><a style="color: inherit" href="{{ route('page5') }}"> БРИКС елдерінде шетелдік жобаларды басқару </a></li>
+                        <li class="menu-item"><a style="color: inherit" href="{{ route('page5') }}"> BRICS елдерінде шетелдік жобаларды басқару </a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('page6') }}"> Big Data </a></li>
                         <li class="menu-item"><a style="color: inherit" href="{{ route('home') }}">Контактілер </a></li>
                     </ul>
