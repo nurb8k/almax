@@ -112,6 +112,18 @@
 
 @yield('content')
 
+<!-- Попап (изначально скрыт) -->
+
+
+<!-- Попап с благодарностью -->
+<div id="thankyou-popup" class="popup" style="display:none;">
+    <div class="popup-content">
+        <h2>Спасибо!
+            Ваша заявка успешно отправлена.</h2>
+        <p>Наш специалист свяжется с вами в течение 24 часов для подтверждения заказа и обсуждения деталей. Мы благодарим вас за выбор наших услуг!</p>
+        <button type="button" class="close-thankyou">Закрыть</button>
+    </div>
+</div>
 <footer class="footer-section">
     <div class="container container-footer">
         @if(App::getLocale() == 'ru')
