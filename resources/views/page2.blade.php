@@ -61,9 +61,8 @@
      data-aos-delay="50"
      data-aos-duration="1000">
     <div class="advantages_wrap nowarp">
-        <h2 class="advantages__title">{{ $pageElements[6]->title }}</h2>
+        <h2 class="advantages__title">{!!  $pageElements[6]->title  !!}</h2>
         {!! $pageElements[6]->content !!}
-{{--        TODO design am bolvatr--}}
     </div>
     <img src="/assets/img/page_b.png" alt="Изображение" class="advantages__image ">
 </div>
