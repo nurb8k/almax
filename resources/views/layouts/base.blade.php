@@ -68,7 +68,7 @@
                         <a href="{{ route('page2') }}">ЕАЭО елдерінде салық және бухгалтерлік есеп бойынша кеңес беру</a>
                     <a href="{{ route('page3') }}">ЕАЭО елдеріндегі жылжымайтын мүлікті басқару және онымен операциялар</a>
                     <a href="{{ route('page4') }}">BRICS елдеріндегі халықаралық консалтингтік қызметтер</a>
-                    <a href="{{ route('page5') }}">БРИКС елдерінде шетелдік жобаларды басқару</a>
+                    <a href="{{ route('page5') }}">BRICS елдерінде шетелдік жобаларды басқару</a>
                     <a href="{{ route('page6') }}">Big Data</a>
                 @else
                     <a href="{{ route('page2') }}">Tax and accounting consulting in the EAEU countries</a>
