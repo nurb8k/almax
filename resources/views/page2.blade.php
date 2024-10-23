@@ -33,7 +33,6 @@
 
     <div class="offer__cards">
         @foreach($pageElements as $element)
-{{--            @dd($pageElements)--}}
             @if($element->id == 9)
                 <?php continue; ?>
             @endif
@@ -42,10 +41,20 @@
                  data-aos-delay="50"
                  data-aos-duration="1000">
                 <div class="offer__card-icon">
-                    <img src="/assets/img/offer-1.svg" alt="" />
+                    @if($element->image)
+                        <img  src="{{ asset('storage/'.$element->image) }}" alt="" />
+                    @else
+                        <img src="/assets/img/offer-1.svg" alt="" />
+                    @endif
+
                 </div>
                 <div class="offer__card-title" >
-                    {{ $element->title }}
+                    @if($loop->index == 6 && App::getLocale() == 'kk')
+                        Бізбен жұмыс істеудің артықшылықтары
+                    @else
+                        {{ $element->title }}
+                    @endif
+
                 </div>
                 <div class="offer__card-description">
                     {!!  $element->content  !!}

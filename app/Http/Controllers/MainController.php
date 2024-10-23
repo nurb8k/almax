@@ -21,7 +21,6 @@ class MainController extends Controller
     {
         $page = Page::find(2);
         $pageElements = $page->elements;
-//        dd($pageElements);
         
         return view('page2', compact('page','pageElements'));
     }

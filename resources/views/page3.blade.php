@@ -29,7 +29,12 @@
                 @if(!$loop->last)
                     <div class="offer__card">
                         <div class="offer__card-icon">
-                            <img src="/assets/img/offer_11.svg" alt="" />
+                            @if($page->image)
+                                <img src="{{ asset('/storage/'.$page->image) }}" alt="" />
+                            @else
+                                <img src="/assets/img/offer_11.svg" alt="" />
+                            @endif
+
                         </div>
                         <div class="offer__card-title">{{$page->title}}</div>
                         <div class="offer__card-description">

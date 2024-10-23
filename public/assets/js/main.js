@@ -15,6 +15,20 @@ document.querySelector('.close').addEventListener('click', function() {
     document.getElementById('popup').style.display = 'none';
 });
 
+// Закрытие попапа при клике вне формы
+window.addEventListener('click', function(event) {
+    const popup = document.getElementById('popup');
+    const thankyouPopup = document.getElementById('thankyou-popup');
+
+    if (event.target == popup) {
+        popup.style.display = 'none';
+    }
+
+    if (event.target == thankyouPopup) {
+        thankyouPopup.style.display = 'none';
+    }
+});
+
 document.querySelector('.cancel').addEventListener('click', function() {
     document.getElementById('popup').style.display = 'none';
 });

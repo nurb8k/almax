@@ -38,7 +38,12 @@
                          data-aos-delay="50"
                          data-aos-duration="1000">
                         <div class="offer__card-icon">
-                            <img src="/assets/img/offer_11.svg" alt="" />
+                            @if($loop->index == 0)
+                                <img src="{{ asset('assets/img/offer_11.svg') }}" alt="" />
+                            @else
+                                <img src="{{ asset('assets/img/offer_12.svg') }}" alt="" />
+                            @endif
+
                         </div>
                         <div class="offer__card-title">{{$page->title}}</div>
                         <div class="offer__card-description">{{$page->content}}</div>
@@ -61,7 +66,13 @@
                          data-aos-delay="50"
                          data-aos-duration="1000">
                         <div class="offer__card-icon">
-                            <img src="/assets/img/offer_11.svg" alt="" />
+                            @if($loop->index == 3)
+                                <img src="{{ asset('assets/img/offer_14.svg') }}" alt="" />
+                            @elseif($loop->index == 4)
+                                <img src="{{ asset('assets/img/offer_15.svg') }}" alt="" />
+                            @else
+                                <img src="{{ asset('assets/img/offer_13.svg') }}" alt="" />
+                            @endif
                         </div>
                         <div class="offer__card-title">{{$page->title}}</div>
                         <div class="offer__card-description">{{$page->content}}</div>

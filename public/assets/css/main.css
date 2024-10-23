@@ -1210,17 +1210,6 @@ nav a {
     padding: 0 10px;
   }
 
-  .popup-content {
-    background: #fff;
-    padding: 60px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 642px;
-
-  }
-
-
-
   .big-data__title {
     font-weight: 700;
     font-size: 40px;
@@ -1424,109 +1413,8 @@ nav a {
     margin-bottom: 16px;
   }
 
-  /* Стили для попапа */
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
 
-  .popup-content {
-    background: #fff;
-    padding: 60px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 642px;
-  }
 
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .popup-content h2 {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 130%;
-    color: #0c0c0c;
-    margin-bottom: 24px;
-  }
-
-  .popup-content p {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 150%;
-    color: #53595a;
-    margin-bottom: 24px;
-  }
-
-  .popup-content form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .popup-content input[type="text"],
-  .popup-content input[type="tel"],
-  .popup-content input[type="email"] {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0;
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-
-  .popup-content input[type="checkbox"] {
-    margin: 40px 0;
-  }
-
-  .popup-content button {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    flex: 1;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-
-  .popup-content button[type="submit"] {
-    background: #f10e00;
-    padding: 25px 50px;
-
-    color: #fff;
-  }
-
-  .popup-content button[type="submit"]:hover {
-    background-color: #f10e00;
-  }
-
-  .popup-content button.cancel {
-    background-color: #fff;
-    color: #f10e00;
-    border: 1px solid #f10e00;
-    padding: 25px 50px;
-  }
-
-  .close-thankyou{
-    color: #f10e00;
-    width: 100%;
-    padding: 24px;
-    border: 1px solid #f10e00;
-    font-weight: 600;
-  }
 
 
   .menu-list {
@@ -1666,6 +1554,17 @@ nav a {
     right: 20px;
     z-index: 99999999;
   }
+
+
+  .popup-content {
+    background: #fff;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 642px;
+
+  }
+
 
   .dropdown {
     position: relative;
@@ -1808,6 +1707,111 @@ nav a {
   border: 1px solid #f10e00;
   font-weight: 600;
 }
+
+/* Стили для попапа */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 642px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-content h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: #0c0c0c;
+  margin-bottom: 24px;
+}
+
+.popup-content p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #53595a;
+  margin-bottom: 24px;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="tel"],
+.popup-content input[type="email"] {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.popup-content input[type="checkbox"] {
+  margin: 40px 0;
+}
+
+.popup-content button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  flex: 1;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.popup-content button[type="submit"] {
+  background: #f10e00;
+  padding: 25px 50px;
+
+  color: #fff;
+}
+
+.popup-content button[type="submit"]:hover {
+  background-color: #f10e00;
+}
+
+.popup-content button.cancel {
+  background-color: #fff;
+  color: #f10e00;
+  border: 1px solid #f10e00;
+  padding: 25px 50px;
+}
+
+.close-thankyou{
+  color: #f10e00;
+  width: 100%;
+  padding: 24px;
+  border: 1px solid #f10e00;
+  font-weight: 600;
+}
+
 
 /*.popup-content button.cancel:hover {*/
 /*  background-color: #;*/
