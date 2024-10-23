@@ -179,11 +179,11 @@ nav a {
 }
 
 .eaec-item::marker {
-  content: url('/public/assets/img/marker.svg');
+  content: url('assets/img/marker.svg');
 }
 
 .brics-item::marker {
-  content: url('/public/assets/img/marker.svg');
+  content: url('assets/img/marker.svg');
 }
 
 .eaec-list {
@@ -196,7 +196,7 @@ nav a {
 
 .container-services::before {
   content: "";
-  background-image: url(/public/assets/img/back_eas.svg);
+  background-image: url(assets/img/back_eas.svg);
   position: absolute;
   background-repeat: no-repeat;
   top: -114px;
@@ -291,7 +291,7 @@ nav a {
 
 .scroll-arrow{
   content: '';
-  background-image: url(/public/assets/img/Scroll.png);
+  background-image: url(assets/img/Scroll.png);
   display: block;
   width: 11px;
   height: 20px;
@@ -310,7 +310,7 @@ nav a {
 .page-2 > .image::before{
   content: '';
   display: block;
-  background-image: url(/public/assets/img/block.svg);
+  background-image: url(assets/img/block.svg);
   width: 318px;
   height: 257px;
   position: absolute;
@@ -321,7 +321,7 @@ nav a {
 
 .pg-21::before{
   content: '';
-  background-image: url(/public/assets/img/cont_fe.svg);
+  background-image: url(assets/img/cont_fe.svg);
   display: block;
   width: 972px;
   height: 533px;
@@ -340,7 +340,7 @@ nav a {
 .page-3 > .image::before{
   content: '';
   display: block;
-  background-image: url(/public/assets/img/block.svg);
+  background-image: url(assets/img/block.svg);
   width: 318px;
   height: 257px;
   position: absolute;
@@ -416,7 +416,7 @@ nav a {
 
 .card:not(:first-child) {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-  url(/public/assets/img/pic_1.png);
+  url(/assets/img/pic_1.png);
   color: #fff;
   padding: 0;
   border: none;
@@ -428,24 +428,24 @@ nav a {
 
 .card:nth-child(3) {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-  url(/public/assets/img/pic_2.png);
+  url(assets/img/pic_2.png);
 }
 
 .card:nth-child(4) {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-  url(/public/assets/img/pic_3.png);
+  url(assets/img/pic_3.png);
 }
 .card:nth-child(5) {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-  url(/public/assets/img/pic_4.png);
+  url(assets/img/pic_4.png);
 }
 .card:nth-child(6) {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-  url(/public/assets/img/pic_5.png);
+  url(assets/img/pic_5.png);
 }
 .card:nth-child(3) {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-  url(/public/assets/img/pic_2.png);
+  url(assets/img/pic_2.png);
 }
 
 .card:not(:first-child) p {
@@ -475,7 +475,7 @@ nav a {
   height: 10px;
   display: block;
   position: absolute;
-  background-image: url(/public/assets/img/arrow.svg);
+  background-image: url(assets/img/arrow.svg);
   background-repeat: no-repeat;
   right: 140px;
 }
@@ -841,7 +841,7 @@ nav a {
 }
 
 .advantages__item::marker {
-  content: url(/public/assets/img/marker.svg);
+  content: url(assets/img/marker.svg);
 }
 
 .advantages__item {
@@ -1067,7 +1067,7 @@ nav a {
   .page-2 > .image::before {
     content: '';
     display: none;
-    background-image: url(/public/assets/img/block.svg);
+    background-image: url(assets/img/block.svg);
     width: 318px;
     height: 257px;
     position: absolute;
@@ -1628,7 +1628,7 @@ nav a {
 
   .pg-21::before {
     content: '';
-    background-image: url(/public/assets/img/cont_fe.svg);
+    background-image: url(assets/img/cont_fe.svg);
     display: none !important;
     width: 972px;
     height: 533px;
