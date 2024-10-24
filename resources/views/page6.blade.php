@@ -63,7 +63,20 @@ $asd = $pageElements->whereIn('id',$predLastPageId)->first();
                          data-aos-delay="50"
                          data-aos-duration="1000">
                         <div class="offer__card-icon">
-                            <img src="/assets/img/offer_11.svg" alt="" />
+                            @if($loop->index == 1 )
+                                <img src="{{ asset('assets/img/offer-1.svg') }}" alt="" />
+                            @elseif($loop->index == 2)
+                                <img src="{{ asset('assets/img/offer-2.svg') }}" alt="" />
+                            @elseif($loop->index == 3)
+                                <img src="{{ asset('assets/img/offer-3.svg') }}" alt="" />
+                            @elseif($loop->index == 4)
+                                <img src="{{ asset('assets/img/offer-4.svg') }}" alt="" />
+                            @elseif($loop->index == 5)
+                                <img src="{{ asset('assets/img/offer-5.svg') }}" alt="" />
+                            @else
+                                <img src="/assets/img/offer_11.svg" alt="" />
+                            @endif
+
                         </div>
                         <div class="offer__card-title">
                             {{$pageElement->title}}

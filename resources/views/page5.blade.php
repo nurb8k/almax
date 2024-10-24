@@ -6,10 +6,10 @@
                     data-aos-offset="200"
                     data-aos-delay="50"
                     data-aos-duration="1000">{{$page->title}}</h2>
-                <p class="content-description"     data-aos="fade-up"
+                <p class="content-description"   style="color:white !important"   data-aos="fade-up"
                    data-aos-offset="200"
                    data-aos-delay="50"
-                   data-aos-duration="1000">{!! $page->content  !!}</p>
+                   data-aos-duration="1000">{{$page->content  }}</p>
             </div>
 
         <div class="image">
@@ -101,7 +101,7 @@
              data-aos-offset="200"
              data-aos-delay="50"
              data-aos-duration="1000">
-            <h2 class="advantages__title mar-b">Ынтымақтастықты бастауға дайынсыз ба?</h2>
+            <h2 class="advantages__title mar-b">Ынтымақтастықты <br> бастауға дайынсыз ба?</h2>
             <div class="advantages_wrap nogap">
                 <div class="block_advgs page4-avd">
                     <p>Біз халықаралық консалтингтік қызметтердің кең спектрін ұсынамыз
